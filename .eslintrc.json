@@ -18,9 +18,14 @@
         "prettier"
     ],
     "rules": {
+      "camelcase": "off",
       "no-use-before-define": "off",
       "class-methods-use-this": "off",
       "prettier/prettier": "error",
+      "@typescript-eslint/camelcase": "off",
+      "@typescript-eslint/no-unused-vars": ["error", {
+          "argsIgnorePattern": "_"
+      }],
       "@typescript-eslint/no-use-before-define": [
 	      "error"
       ],

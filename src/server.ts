@@ -1,6 +1,7 @@
 import 'reflect-metadata';
 
 import express, { Request, Response, NextFunction } from 'express';
+import cors from 'cors';
 // declaração do async-errors deve ser depois da importação do express no arquivo principal
 import 'express-async-errors';
 
@@ -12,6 +13,7 @@ import AppError from './errors/AppError';
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 // rota para exibição dos arquivos importados como imagem
 app.use('/files', express.static(uploadConfig.directory));
